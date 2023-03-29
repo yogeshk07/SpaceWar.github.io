@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: ;
+    }
+    #loading{
+        width: 100%;
+        height: 100vh;
+        border: 0px solid red;
+        color:black;
+        z-index: 1;
+        position: relative;
+        text-align: center;
+        background-color: black;
+        
+
+        
+    }
+    #loading h1{
+        font-size: 300px;
+        font-weight: 900;
+        line-height: 250px; 
+        background: url("img4.jpg");
+        text-align: center;
+        display: inline-flex;
+        background-position: 0 0;
+        -webkit-background-clip: text;
+        color:transparent;
+        animation: animatedOne 20s linear infinite;
+    }
+    #loading span{
+        letter-spacing: 5px;
+        word-spacing: 10px;
+        color: white;
+    }
+    @keyframes animatedOne {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 50% ;
+    }
+    }
+    .video{
+        width: 100%;
+        height: 100vh;
+        border: 0px solid black;
+        position: absolute;
+        float: left;
+        z-index: -1;
+        background-color: black;
+
+
+       
+    }
+    .video video{
+        width: 100%;
+        height: 100%;
+       
+        
+    }
+    .div2{
+        float: left;
+        width: 100%;
+        z-index: 1;
+        border: 0px solid green;
+        text-align: center;
+        transform: translateY(250px);        
+    }
+    button{
+        width: 10%;
+        height: 50PX;
+        background-color: transparent;
+        border: 0px solid rgb(133, 15, 15);
+        border-radius: 10px;
+          
+        font-size: 15px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0,0.8);
+        transition: 0.5s;
+            
+    }
+    button:hover{
+        box-shadow: 0px 5px 5px 0px rgb(238, 237, 238);
+        font-size: 20px;
+
+
+    }
+    button a{
+        text-decoration: none;
+        color:white;
+        
+    }
+    #video,#div2{
+        display: ;
+    }
+</style>
+
+
+
+
+<body>
+    <div id="loading">
+       <h1>SPACE <br> WAR</h1><br>
+       <SPAN>Press any key to start the battle</SPAN>
+
+    </div>
+
+
+    <div class="div2" id="div2">
+        <button><a href="home.html">START - GAME</a></button>
+    </div>
+    <div class="video" id="video">
+      <video src="video1.mp4"  loop id="promo"></video>
+    </div>
+    <audio src="avengerTheme.mp3" id="themeSong"></audio>
+<script>
+        var loading=document.getElementById("loading")
+        var video=document.getElementById("video")
+        var div2=document.getElementById("div2")
+        var promo= document.getElementById("promo")
+        var themeSong=document.getElementById("themeSong")
+        
+       
+        
+            
+        addEventListener ("keydown", function (){
+          //  console.log("kjfheufhekfhiejfjiejiefjio")  
+            loading.style.display = 'none';
+            video.style.display = 'block';
+            div2.style.display = 'block' ; 
+            promo.play();
+            
+
+
+                
+        })
+</script>
+</body>
+</html>
